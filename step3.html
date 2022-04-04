@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>申請交換學生流程</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="bootstrap-4.0.0-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="js/index.js"></script>
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <style>
+        label{color:red;
+              font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              font-size: 15px;
+              font-weight: bold;}
+        p{color: blue;
+          font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-size: 15px;
+          font-weight: bold;}
+        h4 {
+            color: #4692B4;
+            font-size: 15px;
+            font-weight: bold;
+           }
+    </style>
+    
+    <script type="text/javascript">
+        function myUIcheck(){
+            var count = 0;
+            count = $('#pittsburg').prop('checked') + $('#temple').prop('checked') + $('#scranton').prop('checked') +           $('#saintLouis').prop('checked') + $('#stEdward').prop('checked') + $('#marquette').prop('checked');
+            if(count == 0)
+            {
+                alert("請至少勾選一項!!!");                                                                                
+                return false;                                                                                     
+            }
+            else if(count > 5)
+            {
+                alert("至多只能勾選五所而已!!!");
+                return false;
+            }
+            return true;   
+        }
+    </script>
+</head>
+    <body>
+        <div class="container">
+              <form>
+                    <h4>Step3:填選學校(至多選擇五所)</h4>
+                    <table>
+                        <tr>
+                            <td><h4>學校(國家)</h4></td>
+                            <td><h4>名額</h4></td>
+                            <td><h4>要求</h4></td>
+                            <td align="center"><h4>功能</h4></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>匹茲堡州立大學Pittsburg State University(美國)</td>
+                            <td align="center"><label>4</label></td>
+                            <td><p>托福英檢(TOEFL): 79(聽: 15說: 15讀: 15寫: 15)<br>或雅思英檢(IELTS): 6.5(聽: 5 說: 5 讀: 5 寫: 5)<br>
+                                限: 學士班<br>限在校平均高於: 75</p></td>
+                            <td><input type="checkbox" style="display: inline-table;" name="preferedSchool[]" id="pittsburg" value="pittsburg"/>選入志願</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>(自費)天普大學Temple University(美國)</td>
+                            <td align="center"><label>10</label></td>
+                            <td><p>托福英檢(TOEFL): 79(聽: 0說: 0讀: 0寫: 0)<br>或雅思英檢(IELTS): 6.5(聽: 0說: 0讀: 0寫: 0)<br>
+                                限: 學士班<br>限在校平均高於: 80</p></td>
+                            <td width="80px"><input type="checkbox" style="display: inline-table;" name="preferedSchool[]" id="temple" value="temple"/>選入志願</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>斯克蘭頓大學University of Scranton(美國)</td>
+                            <td align="center"><label>3</label></td>
+                            <td><p>托福英檢(TOEFL): 80(聽: 0說: 0讀: 0寫: 0)<br>或雅思英檢(IELTS): 6.5(聽: 0說: 0讀: 0寫: 0)<br>
+                                限: 學士班、碩士班<br>限在校平均高於: 0</p></td>
+                            <td width="80px"><input type="checkbox" style="display: inline-table;" name="preferedSchool[]" id="scranton" value="scranton"/>選入志願</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>聖路易士大學Saint Louis University(美國)</td>
+                            <td align="center"><label>2</label></td>
+                            <td><p>托福英檢(TOEFL): 80(聽: 0說: 0讀: 0寫: 0)<br>或雅思英檢(IELTS): 6.5(聽: 0說: 0讀: 0寫: 0)<br>
+                                限: 學士班、碩士班<br>限在校平均高於: 0</p></td>
+                            <td width="80px"><input type="checkbox" style="display: inline-table;" name="preferedSchool[]" id="saintLouis" value="saintLouis"/>選入志願</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>聖愛德華大學St. Edward's University(美國)</td>
+                            <td align="center"><label>1</label></td>
+                            <td><p>托福英檢(TOEFL): 79(聽: 0說: 0讀: 0寫: 0)<br>或雅思英檢(IELTS): 6.5(聽: 0說: 0讀: 0寫: 0)<br>
+                                限: 學士班<br>限在校平均高於: 80</p></td>
+                            <td width="80px"><input type="checkbox" style="display: inline-table;" name="preferedSchool[]" id="stEdward" value="stEdward"/>選入志願</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>馬凱特大學Marquette University</td>
+                            <td align="center"><label>2</label></td>
+                            <td><p>托福英檢(TOEFL): 80(聽: 18說: 18讀: 18寫: 18)<br>或雅思英檢(IELTS): 6.5(聽: 6.5說: 6.5讀: 6.5寫: 6.5)<br>
+                                限: 學士班<br>限在校平均高於: 0</p></td>
+                            <td width="80px"><input type="checkbox" style="display: inline-table;" name="preferedSchool[]" id="marquette" value="marquette"/>選入志願</td>
+                        </tr>
+                    </table>
+                    <div class="row">
+                        <div class="col-half">
+                            <input type="submit" onclick="myUIcheck()" value="提交">
+                        </div>
+
+                        <div class="col-half">
+                            <input type="reset" value="重設">
+                        </div>
+                    </div>
+
+              </form>
+        </div>
+
+    </body>
+
+</html>

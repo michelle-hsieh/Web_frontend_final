@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+    <head>
+        <meta charset="big-5">
+        <title>ApplicationForm</title>
+        <script type="text/javascript">
+            function SetCwinHeight()
+            {
+                var iframeid=document.getElementById("steps"); 
+                  if (document.getElementById)
+                  {   
+                  if (iframeid && !window.opera)
+                  {   
+                    if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight)
+                    {   
+                       iframeid.height = iframeid.contentDocument.body.offsetHeight;   
+                    }
+                    else if(iframeid.Document && iframeid.Document.body.scrollHeight)
+                    {   
+                       iframeid.height = iframeid.Document.body.scrollHeight;   
+                    }   
+                }
+                   }
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div style="position: fixed; top: 75%; right: 0%; z-index: 999;">
+            <a id="share_up" href="#" title="回頂端" alt="回頂端"><img width="50" height="50" src="IMG/back2top.png"></a>
+        </div>
+        
+        <table style="position: fixed; top: 15%; left: 0%;">
+            <tr>
+                <td align="left"><a href="step1.html" target="steps"><img width="140" height="140" src="IMG/step1.png"></a></td>
+            </tr>
+            
+            <tr>
+                <td align="left"><a href="step2.html" target="steps"><img width="140" height="140" src="IMG/step2.png"></a></td>
+            </tr>
+            
+            <tr>
+                 <td align="left"><a href="step3.html" target="steps"><img width="140" height="140" src="IMG/step3.png"></a></td>
+            </tr>
+            
+            <tr>
+                <td align="left"><a href="step4.html" target="steps"><img width="140" height="140" src="IMG/step4.png"></a></td>
+            </tr>
+        </table>
+        <table align="center">
+            <tr>
+                <td><iframe src="step1.html" width="800" height="2000" id="steps" name="steps" frameborder="0" scrolling="auto"       onload="Javascript:SetCwinHeight()"></iframe></td>
+            </tr>
+        </table>
+    </body>
+</html>
